@@ -48,8 +48,41 @@ function App() {
         <p>2월 19일 발행</p>
         <hr/>
       </div>
+
+      <Modal></Modal>
+
     </div>
   );
 }
+
+function Modal() {
+  /* 
+    - Component 관습 
+    1. 이름을 대문자로 시작한다. 
+    2. 소괄호()안에 HTML을 넣어주면됨. div가 여러개 사용하고싶으면 큰div로 묶은뒤 그 안에서 사용
+    3. fragment 문법<></>을 div대신 사용할 수 있음 
+    4. function App()과 나란히 만들면됨, function App()도 하나의 Component임 
+
+    - Component로 만들면 좋은것들 
+    1. 반복출현하는 HTML덩어리들 
+    2. 자주변경되는 HTML UI들 
+    3. 다른 페이지 만들때 
+
+    - Component사용시 단점
+    state사용할 때 복잡해짐. function App()안에 있는 변수를 해당 function Modal()안에서 사용하려할때 복잡.
+
+  */
+  return (
+    <div className="modal">
+      <h2>제목</h2>
+      <p>날짜</p>
+      <p>상세내용</p>
+    </div>
+  )
+}
+
+
+
+
 
 export default App;
